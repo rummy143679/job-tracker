@@ -13,7 +13,7 @@ app.use(cors(
   {
     origin: [
       "http://localhost:5173",
-      "https://job-applications-track.netlify.app/",
+      "https://job-applications-track.netlify.app",
     ],
     credentials: true,
   }
