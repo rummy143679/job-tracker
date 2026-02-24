@@ -9,7 +9,15 @@ import jobRoutes from "./src/routes/jobRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin: [
+      "http://localhost:5173",
+      "https://job-applications-track.netlify.app/",
+    ],
+    credentials: true,
+  }
+));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
